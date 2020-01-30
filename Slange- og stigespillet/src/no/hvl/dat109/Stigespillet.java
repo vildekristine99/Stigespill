@@ -1,0 +1,75 @@
+/**
+ * 
+ */
+package no.hvl.dat109;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+/**
+ * Klasse som definerer spillet
+ * 
+ * @author Vilde Kristine Fossum
+ *
+ */
+public class Stigespillet {
+	private List<Spiller> spillere = new ArrayList<Spiller>();
+	private boolean ferdig;
+	private Terning terning;
+	private Brett brett;
+	private Scanner scanner = new Scanner(System.in);
+	
+	/**
+	 * @param spillere
+	 * @param ferdig
+	 */
+	public Stigespillet() {
+		this.brett = new Brett();
+		this.ferdig = false;
+		this.terning = new Terning();
+	}
+	
+	/**
+	 * Metode som starter spillet
+	 */
+	public void startSpill() {
+		opprettSpillere();
+		while(ferdig == false) {
+			spillRunde();
+		}
+	}
+
+
+	/**
+	 * Metode som utfører en runde
+	 */
+	private void spillRunde() {
+		for(int i = 0; i < spillere.size(); i++) {
+			spillere.get(i).spillTrekk(terning);
+		}
+	}
+	
+	private void opprettSpillere() {
+		System.out.println("Hvor mange spillere skal være med?");
+		int antall = scanner.nextInt();
+		for(int i=1; i <= antall; i++) {
+			System.out.println("Oppgi navn på spiller "+i);
+			scanner.nextLine();
+			String navn = scanner.nextLine();
+			System.out.println("Oppgi nummer på fargen til spiller "+i);
+			System.out.println("1: Blå, 2: Grønn, 3: Gul, 4: Rød");
+			int svar = scanner.nextInt();
+			Farge farge = null;
+			switch(svar){
+				case 1: farge = Farge.BLÅ;
+				case 2: farge = Farge.GRØNN;
+				case 3: farge = Farge.GUL;
+				case 4: farge = Farge.RØD;
+			}
+			Spiller spiller = new Spiller(navn, farge, brett);
+			spillere.add(spiller);
+		}
+		
+	}
+}

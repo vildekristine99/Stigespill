@@ -1,0 +1,46 @@
+/**
+ * 
+ */
+package no.hvl.dat109;
+
+import java.util.List;
+
+/**
+ * Klasse som definerer spillet
+ * 
+ * @author Vilde Kristine Fossum
+ *
+ */
+public class Stigespillet {
+	private List<Spiller> spillere;
+	private boolean ferdig;
+	
+	/**
+	 * @param spillere
+	 * @param ferdig
+	 */
+	public Stigespillet(List<Spiller> spillere, boolean ferdig) {
+		super();
+		this.spillere = spillere;
+		this.ferdig = ferdig;
+	}
+	
+	/**
+	 * Metode som starter spillet
+	 */
+	public void startSpill() {
+		while(ferdig == false) {
+			spillRunde();
+		}
+	}
+
+
+	/**
+	 * Metode som utfører en runde
+	 */
+	private void spillRunde() {
+		for(int i = 0; i < spillere.size(); i++) {
+			spillere.get(i).spillTrekk(terning);
+		}
+	}
+}

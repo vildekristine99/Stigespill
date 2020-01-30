@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package no.hvl.dat109;
+
+/**
+ * @author Vilde Kristine Fossum
+ *
+ */
+public class Brikke {
+	
+	/**
+	 * Flytter et gitt antall steg
+	 * @param sum
+	 */
+	public void flytt(Integer sum) {
+		Rute nyRute = brett.finnRute(rute, sum);
+		setRute(nyRute);
+	}
+}

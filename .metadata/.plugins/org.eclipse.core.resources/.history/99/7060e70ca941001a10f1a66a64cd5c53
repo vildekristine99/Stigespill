@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+package no.hvl.dat109;
+
+/**
+ * Klasse som definerer spilleren
+ * 
+ * @author Vilde Kristine Fossum
+ *
+ */
+public class Spiller {
+	private String navn;
+	
+	public void spillTrekk(Terning terning) {
+		terning.trill();
+		Integer sum = terning.getVerdi();
+	}
+}

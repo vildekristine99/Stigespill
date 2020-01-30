@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Users\hsm20\OneDrive\Lenovo\Documents\HVL\DAT109\Eclipse-DAT109\.metadata\.plugins\org.eclipse.jdt.core
+4210876544.index
+3069065464.index

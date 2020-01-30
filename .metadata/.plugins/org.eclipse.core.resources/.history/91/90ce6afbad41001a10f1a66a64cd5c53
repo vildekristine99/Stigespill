@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package no.hvl.dat109;
+
+/**
+ * @author Vilde Kristine Fossum
+ *
+ */
+public class Terning {
+	private Integer verdi;
+	
+	public void trill() {
+		
+	}
+
+	public Integer getVerdi() {
+		return this.verdi;
+	}
+}

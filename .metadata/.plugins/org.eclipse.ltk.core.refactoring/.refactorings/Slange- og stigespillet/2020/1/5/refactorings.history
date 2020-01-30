@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;no.hvl.dat109.Brikke.farge&apos; in &apos;no.hvl.dat109.Brikke&apos;&#x0D;&#x0A;- Original project: &apos;Slange- og stigespillet&apos;&#x0D;&#x0A;- Original element: &apos;no.hvl.dat109.Brikke.farge&apos;&#x0D;&#x0A;- Getter method name: &apos;getFarge&apos;&#x0D;&#x0A;- Setter method name: &apos;setFarge&apos;&#x0D;&#x0A;- Field visibility: &apos;public&apos;&#x0D;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;farge&apos;" flags="589830" getter="getFarge" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;no.hvl.dat109{Brikke.java[Brikke^farge" insertion="2" setter="setFarge" stamp="1580209478599" version="1.0" visibility="1"/>
+</session>

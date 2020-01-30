@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+package no.hvl.dat109;
+
+import java.util.Random;
+
+/**
+ * @author Vilde Kristine Fossum
+ *
+ */
+public class Terning {
+	private Integer verdi;
+	
+	public void trill() {
+		Random tall = new Random();
+		verdi = 1 + tall.nextInt(6);
+	}
+
+	public Integer getVerdi() {
+		return this.verdi;
+	}
+	
+}

@@ -1,0 +1,60 @@
+/**
+ * 
+ */
+package no.hvl.dat109;
+
+import java.util.List;
+import java.util.Scanner;
+
+/**
+ * Klasse som definerer spillet
+ * 
+ * @author Vilde Kristine Fossum
+ *
+ */
+public class Stigespillet {
+	private List<Spiller> spillere = new ArrayList<Spiller>();
+	private boolean ferdig;
+	private Terning terning;
+	private Brett brett;
+	private Scanner scanner = new Scanner(System.in);
+	
+	/**
+	 * @param spillere
+	 * @param ferdig
+	 */
+	public Stigespillet() {
+		this.brett = new Brett();
+		this.ferdig = false;
+		this.terning = new Terning();
+		opprettSpillere();
+	}
+	
+	/**
+	 * Metode som starter spillet
+	 */
+	public void startSpill() {
+		while(ferdig == false) {
+			spillRunde();
+		}
+	}
+
+
+	/**
+	 * Metode som utfører en runde
+	 */
+	private void spillRunde() {
+		for(int i = 0; i < spillere.size(); i++) {
+			spillere.get(i).spillTrekk(terning);
+		}
+	}
+	
+	private void opprettSpilere() {
+		System.out.println("Hvor mange spillere skal være med?");
+		int antall = scanner.nextInt();
+		for(int i=0; i < antall; i++) {
+			System.out.println("Oppgi navn op spiller "+(i+1));
+		}
+		
+	}
+}

@@ -1,0 +1,26 @@
+/**
+ * 
+ */
+package no.hvl.dat109;
+
+import java.util.List;
+
+/**
+ * Metode som definerer spillet
+ * 
+ * @author Vilde Kristine Fossum
+ *
+ */
+public class Slangespillet {
+	private List<Spiller> spillere;
+	
+	public void spill() {
+		
+	}
+	
+	private void spillRunde() {
+		for(int i = 0; i < spillere.size(); i++) {
+			spillRunde();
+		}
+	}
+}

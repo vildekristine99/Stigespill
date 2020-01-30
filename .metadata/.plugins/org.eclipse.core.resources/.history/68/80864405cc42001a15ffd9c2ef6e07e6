@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package no.hvl.dat109;
+
+/**
+ * @author Vilde Kristine Fossum
+ *
+ */
+public class Main {
+	public static void main(String[] args) {
+		List<Spiller> spillere = {new Spiller("Vilde", )
+	}
+}

@@ -1,0 +1,34 @@
+package no.hvl.dat109;
+
+/**
+ * Klasse som definerer spilleren
+ * 
+ * @author Vilde Kristine Fossum
+ *
+ */
+public class Spiller {
+	private String navn;
+	private Brikke brikke;
+	
+	
+	
+	/**
+	 * @param navn
+	 * @param brikke
+	 */
+	public Spiller(String navn, Farge farge, Brett brett) {
+		super();
+		this.navn = navn;
+		this.brikke = new Brikke(farge);
+	}
+
+
+
+	public void spillTrekk(Terning terning) {
+		terning.trill();
+		Integer verdi = terning.getVerdi();
+		brikke.flytt(verdi);
+	}
+
+
+}

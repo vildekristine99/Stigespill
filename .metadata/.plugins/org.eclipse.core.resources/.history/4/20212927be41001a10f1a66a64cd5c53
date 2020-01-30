@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package no.hvl.dat109;
+
+/**
+ * @author Vilde Kristine Fossum
+ *
+ */
+public class Rute {
+	private String ruteNr;
+}

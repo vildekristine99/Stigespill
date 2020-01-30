@@ -1,0 +1,15 @@
+/**
+ * 
+ */
+package no.hvl.dat109;
+
+/**
+ * Klasse som definerer spilleren
+ * 
+ * @author Vilde Kristine Fossum
+ *
+ */
+public class Spiller {
+	private String navn;
+	private 
+}

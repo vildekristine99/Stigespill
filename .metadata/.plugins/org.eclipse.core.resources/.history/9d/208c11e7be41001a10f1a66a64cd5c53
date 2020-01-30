@@ -1,0 +1,26 @@
+/**
+ * 
+ */
+package no.hvl.dat109;
+
+import java.util.List;
+
+/**
+ * @author Vilde Kristine Fossum
+ *
+ */
+public class Brett {
+	private List<Rute> ruter;
+	
+	/**
+	 * Finner og retunerer ruten som er sum steg frem for rute
+	 * 
+	 * @param rute
+	 * @param sum
+	 * @return
+	 */
+	public Rute finnRute(Rute rute, Integer sum) {
+		return null;
+	}
+	
+}

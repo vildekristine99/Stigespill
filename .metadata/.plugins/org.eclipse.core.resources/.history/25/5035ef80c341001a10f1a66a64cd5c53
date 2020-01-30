@@ -1,0 +1,32 @@
+/**
+ * 
+ */
+package no.hvl.dat109;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * @author Vilde Kristine Fossum
+ *
+ */
+public class Brett {
+	private List<Rute> ruter = new ArrayList<Rute>(100);
+	
+	/**
+	 * Finner og retunerer ruten som er sum steg frem for rute
+	 * 
+	 * @param rute
+	 * @param sum
+	 * @return
+	 */
+	public Rute finnRute(Rute rute, Integer verdi) {
+		Rute nyRute = ruter.get(rute.getRuteNr() + verdi);
+		return nyRute;
+	}
+
+	public List getRuter() {
+		return ruter;
+	}
+	
+}

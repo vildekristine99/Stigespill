@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+package no.hvl.dat109;
+
+/**
+ * @author Vilde Kristine Fossum
+ *
+ */
+public class Brett {
+	
+	/**
+	 * Finner og retunerer ruten som er sum steg frem for rute
+	 * 
+	 * @param rute
+	 * @param sum
+	 * @return
+	 */
+	public Rute finnRute(Rute rute, Integer sum) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}
