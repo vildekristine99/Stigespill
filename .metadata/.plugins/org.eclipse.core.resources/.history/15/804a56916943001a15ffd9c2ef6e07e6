@@ -32,7 +32,7 @@ public class Brett {
 	 * Finner og retunerer ruten som er sum steg frem for rute
 	 * 
 	 * @param rute
-	 * @param verdi
+	 * @param sum
 	 * @return
 	 */
 	public Rute finnRute(Rute rute, Integer verdi) {

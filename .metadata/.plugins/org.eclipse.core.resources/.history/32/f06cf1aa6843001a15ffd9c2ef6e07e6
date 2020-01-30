@@ -32,18 +32,11 @@ public class Brett {
 	 * Finner og retunerer ruten som er sum steg frem for rute
 	 * 
 	 * @param rute
-	 * @param verdi
+	 * @param sum
 	 * @return
 	 */
 	public Rute finnRute(Rute rute, Integer verdi) {
-		Integer ruteNr = rute.getRuteNr() + verdi;
-		Rute nyRute = null;
-		if(ruteNr <= 100) {
-			nyRute = ruter.get(ruteNr-1);
-		} else {
-			ruteNr = ruteNr - 100;
-			nyRute = ruter.get(rute.getRuteNr() - ruteNr);
-		}
+		Rute nyRute = ruter.get(rute.getRuteNr() + verdi - 1);
 		return nyRute;
 	}
 
