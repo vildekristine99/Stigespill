@@ -53,6 +53,5 @@ public class Brett {
 	public List<Rute> getRuter() {
 		return ruter;
 	}
-
 	
 }

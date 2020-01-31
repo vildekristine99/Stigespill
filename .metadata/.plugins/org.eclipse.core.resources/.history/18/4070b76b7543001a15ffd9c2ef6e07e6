@@ -35,8 +35,7 @@ public class Brikke {
 	
 
 	public void startPåNytt() {
-		Rute nyRute = brett.getRuter().get(0);	
-		setRute(nyRute);
+		Rute nyRute = brett.getRuter().get(0);		
 	}
 	
 	public Rute getRute() {

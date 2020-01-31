@@ -6,7 +6,6 @@ package no.hvl.dat109;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 /**
  * Klasse som definerer spillet
@@ -16,6 +15,7 @@ import java.util.stream.Collectors;
  */
 public class Stigespillet {
 	private List<Spiller> spillere = new ArrayList<Spiller>();
+	private boolean ferdig;
 	private Terning terning;
 	private Brett brett;
 	private Scanner scanner = new Scanner(System.in);
@@ -26,29 +26,22 @@ public class Stigespillet {
 	 */
 	public Stigespillet() {
 		this.brett = new Brett();
+		this.ferdig = false;
 		this.terning = new Terning();
 	}
 	
-	private boolean vunnet() {
-		return spillere.stream().anyMatch(p -> p.getBrikke().getRute().getRuteNr() == 100);
-	}
 	/**
 	 * Metode som starter spillet
 	 */
 	public void startSpill() {
 		opprettSpillere();
-		while(!vunnet()) {
+		while(ferdig == false) {
 			spillRunde();
 		}
-		sluttSpill();
 	}
 	
 	private void sluttSpill() {
-		String vinner = spillere.stream().filter(s -> s.getBrikke().getRute().getRuteNr() == 100)
-										 .map(s -> s.getNavn())
-										 .collect(Collectors.joining());
-		System.out.println(vinner + ", du har vunnet spillet!");
-		System.out.println("Spillet er nå ferdig");
+		
 	}
 
 	/**
@@ -58,7 +51,6 @@ public class Stigespillet {
 		for(int i = 0; i < spillere.size(); i++) {
 			spillere.get(i).spillTrekk(terning);
 		}
-		
 	}
 	
 	private void opprettSpillere() {

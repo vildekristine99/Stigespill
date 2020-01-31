@@ -30,7 +30,8 @@ public class Stigespillet {
 	}
 	
 	private boolean vunnet() {
-		return spillere.stream().anyMatch(p -> p.getBrikke().getRute().getRuteNr() == 100);
+		spillere.stream().forEach(p -> p.getBrikke().getRute().getRuteNr()).map(p -> p == 100);
+		return ruteNr == 100;
 	}
 	/**
 	 * Metode som starter spillet

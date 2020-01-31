@@ -41,7 +41,8 @@ public class Brett {
 		if(ruteNr <= 100) {
 			nyRute = ruter.get(ruteNr-1);
 		} else {
-			nyRute = rute;
+			ruteNr = ruteNr - 100;
+			nyRute = ruter.get(rute.getRuteNr() - ruteNr);
 		}
 		return nyRute;
 	}
@@ -53,6 +54,5 @@ public class Brett {
 	public List<Rute> getRuter() {
 		return ruter;
 	}
-
 	
 }

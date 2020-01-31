@@ -42,20 +42,12 @@ public class Spiller {
 				if(scanner.hasNextLine()) {
 					terning.trill();
 					verdi = terning.getVerdi();
-					if(verdi.equals(6)) {
-						brikke.startPåNytt();
-						System.out.println("Du fikk: "+verdi+ " og rykker tilbake til start");
-						verdi = 0;
-					}
 				}
 			}
-			if(!verdi.equals(0)) {
-				System.out.println("Du fikk: " + verdi);
-				brikke.flytt(verdi);
-			}
+			System.out.println("Du fikk: " + verdi);
+			brikke.flytt(verdi);
 			System.out.println("Du er nå på rute: "+brikke.getRute().getRuteNr());
 			scanner.nextLine();
-			
 		}
 		
 		

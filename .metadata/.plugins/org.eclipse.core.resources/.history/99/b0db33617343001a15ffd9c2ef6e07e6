@@ -32,30 +32,20 @@ public class Spiller {
 		System.out.println("Trykk enter for å kaste terningen");
 		if(scanner.hasNextLine()) {
 			terning.trill();
-			Integer verdi = terning.getVerdi();
-			if(verdi.equals(6)) {
+			int verdi = terning.getVerdi();
+			if(verdi == 6) {
 				System.out.println("Du fikk: 6");
 				brikke.flytt(verdi);
 				System.out.println("Du er nå på rute: "+brikke.getRute().getRuteNr());
-				System.out.println("Trykk enter for å kaste igjen");
+				System.out.println("Trykk enter for å kaste terningen");
+				terning.trill();
+				verdi = terning.getVerdi();
 				scanner.nextLine();
-				if(scanner.hasNextLine()) {
-					terning.trill();
-					verdi = terning.getVerdi();
-					if(verdi.equals(6)) {
-						brikke.startPåNytt();
-						System.out.println("Du fikk: "+verdi+ " og rykker tilbake til start");
-						verdi = 0;
-					}
-				}
 			}
-			if(!verdi.equals(0)) {
-				System.out.println("Du fikk: " + verdi);
-				brikke.flytt(verdi);
-			}
+			System.out.println("Du fikk: " + verdi);
+			brikke.flytt(verdi);
 			System.out.println("Du er nå på rute: "+brikke.getRute().getRuteNr());
 			scanner.nextLine();
-			
 		}
 		
 		
